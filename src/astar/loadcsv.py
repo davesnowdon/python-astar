@@ -4,7 +4,8 @@ import sys
 from astar import Graph
 
 def strip_comments_from_file(fp):
-    for row in fp:
+    # iter over readlines() rather than file handle as mock_open does not support iteration
+    for row in fp.readlines():
         raw = row.split('#')[0].strip()
         if raw: yield raw
 
