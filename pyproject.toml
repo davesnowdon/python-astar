@@ -51,7 +51,7 @@ docutils = "<0.15.1" # temporary hot patch
 doc = ["sphinx", "sphinx_rtd_theme", "m2r"]
 
 [tool.poetry.scripts]
-astar = "astar-graph-search.cli:astar"
+astar = "astar-graph-search.cli:graphsearch"
 
 [tool.black]
 line-length = 120
