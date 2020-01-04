@@ -40,8 +40,9 @@ def main(args):
     graph = build_graph(args[0], args[1])
     print(f"Graph {graph.node_count()} nodes,  {graph.edge_count()} edges")
     search = AStarSearch(graph)
-    path = search.find_path(args[2], args[3])
+    path, cost = search.find_path(args[2], args[3])
     print(f"Path = {path}")
+    print(f"Cost = {cost}")
 
 if __name__== "__main__":
     # ignore first argument which is just the python file

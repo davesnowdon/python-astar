@@ -22,7 +22,7 @@ class AStarSearch(object):
         while len(self.open_nodes) > 0:
             cur_node = self.open_nodes.pop()
             if cur_node.id == goal_node_id:
-                return self.reconstruct_path(start_node, cur_node)
+                return (self.reconstruct_path(start_node, cur_node), self.costs[cur_node.id])
             for edge in cur_node.edges:
                 edge_node = edge.get_destination(cur_node)
                 if edge_node in self.closed_nodes:
